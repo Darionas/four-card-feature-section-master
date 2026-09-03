@@ -41,3 +41,6 @@ Thumbs.db
 
 # Do not upload the extra folder
 /extra
+
+# Do not upload the tablet design reference
+/design/tablet-design.png
