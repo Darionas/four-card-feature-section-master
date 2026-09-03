@@ -23,17 +23,18 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #fafafa;
 }
 
 .text-preset-1 {
-    font-size: 2.25rem;
+    font-size: clamp(1.3rem, 2vw, 2.25rem);
     font-weight: 600;
     line-height: 140%;
     letter-spacing: 0.25px;
 }
 
 .text-preset-2 {
-    font-size: 2.25rem;
+    font-size: clamp(1.3rem, 2vw, 2.25rem);
     font-weight: 200;
     line-height: 140%;
     letter-spacing: 0.25px;
@@ -64,13 +65,52 @@ body {
     width: 85%;
     max-width: 1200px;
     justify-self: center;
-    padding-block: var(--spacing-500) var(--spacing-300);
 }
 
-.feature-icon {
-    margin-left: auto;
+.header {
+    text-align: center;
+    margin-block-start: var(--spacing-500);
+}
+
+.description {
+    margin-block-start: var(--spacing-200);
 }
 
 .main {
     margin-block-start: var(--spacing-500);
+    /* border: 2px solid var(--clr-grey-500); */
+}
+
+.features {
+    display: grid;
+    gap: var(--spacing-400);
+}
+
+.feature {
+    padding: var(--spacing-400);
+    background-color: var(--clr-white);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    /* border: 2px solid var(--clr-grey-500); */
+}
+
+.feature--supervisor {
+    border-top: 4px solid var(--clr-cyan);
+}
+
+.feature--team-builder {
+    border-top: 4px solid var(--clr-red);
+}
+
+.feature--karma {
+    border-top: 4px solid var(--clr-orange);
+}
+
+.feature--calculator {
+    border-top: 4px solid var(--clr-blue);
+}   
+
+.feature-icon {
+    margin-block-start: var(--spacing-400);
+    margin-left: auto;
 }
