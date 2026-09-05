@@ -63,8 +63,9 @@ body {
 
 .container {
     width: 85%;
-    max-width: 1200px;
+    max-width: 800px;
     justify-self: center;
+    justify-items: center;
 }
 
 .header {
@@ -74,6 +75,7 @@ body {
 
 .description {
     margin-block-start: var(--spacing-200);
+    max-width: 545px;
 }
 
 .main {
@@ -113,4 +115,58 @@ body {
 .feature-icon {
     margin-block-start: var(--spacing-400);
     margin-left: auto;
+}
+
+/* Tablet */
+@media (min-width: 41rem) {
+    .main.container {
+        max-width: 1100px;
+    }
+
+    .features {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grid-col-span-2 {
+        grid-column: span 2;
+    }
+
+    .feature--team-builder {
+        grid-column: 2/4;
+        grid-row: 1;
+    }
+
+    .feature--calculator {
+        grid-column: 2/4;
+        grid-row: 3;
+    }
+}
+
+/* Desktop */
+@media (min-width: 48rem) {
+
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .feature--team-builder {
+        grid-column: 2/3;
+        grid-row: 1/3;
+    }
+
+    .feature--supervisor {
+        grid-column: 1/2;
+        grid-row: 2/4;
+    }
+
+    .feature--calculator {
+        grid-column: 3/4;
+        grid-row: 2/4;
+    }
+
+    .feature--karma {
+        grid-column: 2/3;
+        grid-row: 3/5;
+    }
 }
